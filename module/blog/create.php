@@ -41,7 +41,7 @@ check_authentication();
 
 if (isset($_POST['create']) && isset($_COOKIE['username'])) {
 
-    $title = remove_bad_characters($_POST['blog_title']);
+    $title = addslashes($_POST['blog_title']);
     $content = remove_bad_characters($_POST['blog_content']);
     $author = $_COOKIE['username'];
 
